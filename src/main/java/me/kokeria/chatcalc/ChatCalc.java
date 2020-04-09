@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = ChatCalc.MODID, version = ChatCalc.VERSION)
+@Mod(modid = ChatCalc.MODID, version = ChatCalc.VERSION, clientSideOnly = true)
 public class ChatCalc
 {
     public static final String MODID = "chatcalc";
