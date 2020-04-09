@@ -14,6 +14,10 @@ public class ChatHelper {
         return input.substring(0, start) + replacement + input.substring(end);
     }
 
+    public static String addWordAfterIndex(String input, int index, String word) {
+        return input.substring(0, index) + word + input.substring(index);
+    }
+
     public static int getStartOfWord(String input, int cursor) {
         if (cursor == 0) return 0;
         if (input.charAt(cursor - 1) == ' ') return cursor;
