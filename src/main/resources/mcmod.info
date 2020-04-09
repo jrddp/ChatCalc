@@ -1,0 +1,16 @@
+[
+{
+  "modid": "chatcalc",
+  "name": "ChatCalc",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Kokeria"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
