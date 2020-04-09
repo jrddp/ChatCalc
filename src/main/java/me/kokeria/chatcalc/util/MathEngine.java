@@ -1,4 +1,4 @@
-package me.kokeria.chatcalc;
+package me.kokeria.chatcalc.util;
 
 public class MathEngine {
 
