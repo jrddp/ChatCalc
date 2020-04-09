@@ -8,6 +8,12 @@ public class ChatHelper {
 
     }
 
+    public static String replaceWord(String input, int cursor, String replacement) {
+        int start = getStartOfWord(input, cursor);
+        int end = getEndOfWord(input, cursor);
+        return input.substring(0, start) + replacement + input.substring(end);
+    }
+
     public static int getStartOfWord(String input, int cursor) {
         if (cursor == 0) return 0;
         if (input.charAt(cursor - 1) == ' ') return cursor;
