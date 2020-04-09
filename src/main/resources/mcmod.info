@@ -5,7 +5,7 @@
     "description": "A simple mod that turns your chat into a calculator.\nType an equation and hit tab to replace it with the solution.",
     "version": "${version}",
     "mcversion": "${mcversion}",
-    "url": "",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/chatcalc",
     "updateUrl": "",
     "authorList": ["Kokeria"],
     "credits": "",
