@@ -1,5 +1,7 @@
 package me.kokeria.chatcalc.util;
 
+import net.minecraft.client.gui.GuiTextField;
+
 public class ChatHelper {
 
     public static String getWord(String input, int cursor) {
@@ -8,14 +10,24 @@ public class ChatHelper {
 
     }
 
-    public static String replaceWord(String input, int cursor, String replacement) {
+    public static boolean replaceWord(GuiTextField field, String replacement) {
+        String input = field.getText();
+        int cursor = field.getCursorPosition();
         int start = getStartOfWord(input, cursor);
         int end = getEndOfWord(input, cursor);
-        return input.substring(0, start) + replacement + input.substring(end);
+
+        String output = input.substring(0, start) + replacement + input.substring(end);
+        if (output.length() > field.getMaxStringLength()) return false;
+        field.setText(output);
+        return true;
     }
 
-    public static String addWordAfterIndex(String input, int index, String word) {
-        return input.substring(0, index) + word + input.substring(index);
+    public static boolean addWordAfterIndex(GuiTextField field, int index, String word) {
+        String input = field.getText();
+        String output = input.substring(0, index) + word + input.substring(index);
+        if (output.length() > field.getMaxStringLength()) return false;
+        field.setText(output);
+        return true;
     }
 
     public static int getStartOfWord(String input, int cursor) {

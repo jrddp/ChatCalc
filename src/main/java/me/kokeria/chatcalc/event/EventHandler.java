@@ -31,9 +31,7 @@ public class EventHandler {
             String word = ChatHelper.getWord(originalText, cursor);
             double solution = MathEngine.eval(word);
             String solStr = df.format(solution);
-            String newText = ChatHelper.replaceWord(originalText, cursor, solStr);
-            field.setText(newText);
-            return true;
+            return ChatHelper.replaceWord(field, solStr);
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
             return false;
@@ -55,9 +53,7 @@ public class EventHandler {
             word = word.substring(0, word.length() - 1);
             double solution = MathEngine.eval(word);
             String solStr = df.format(solution);
-            String newText = ChatHelper.addWordAfterIndex(originalText, ChatHelper.getEndOfWord(originalText, cursor), solStr);
-            field.setText(newText);
-            return true;
+            return ChatHelper.addWordAfterIndex(field, ChatHelper.getEndOfWord(originalText, cursor), solStr);
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
             return false;
