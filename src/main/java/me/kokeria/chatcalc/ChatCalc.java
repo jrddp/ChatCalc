@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class ChatCalc
 {
     public static final String MODID = "chatcalc";
-    public static final String VERSION = "2.0";
+    public static final String VERSION = "2.1";
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
