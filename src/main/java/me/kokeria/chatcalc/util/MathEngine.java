@@ -65,9 +65,9 @@ public class MathEngine {
                     if (eat('(')) { // parentheses
                         x = parseExpression();
                         eat(')');
-                    } else if ((ch >= '0' && ch <= '9') || ch == '.') { // numbers
-                        while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
-                        x = Double.parseDouble(str.substring(startPos, this.pos));
+                    } else if ((ch >= '0' && ch <= '9') || ch == '.' || ch == ',') { // numbers
+                        while ((ch >= '0' && ch <= '9') || ch == '.' || ch == ',') nextChar();
+                        x = Double.parseDouble(str.substring(startPos, this.pos).replaceAll(",", ""));
                     } else if (ch >= 'a' && ch <= 'z') { // functions
                         while (ch >= 'a' && ch <= 'z') nextChar();
                         String func = str.substring(startPos, this.pos);

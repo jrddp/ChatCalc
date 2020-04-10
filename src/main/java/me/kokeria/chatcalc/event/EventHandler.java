@@ -1,13 +1,15 @@
 package me.kokeria.chatcalc.event;
 
+import me.kokeria.chatcalc.util.ChatHelper;
 import me.kokeria.chatcalc.util.MathEngine;
 import net.minecraft.client.gui.GuiChat;
+import net.minecraft.client.gui.GuiTextField;
 
 import java.text.DecimalFormat;
 
 public class EventHandler {
 
-    private static final DecimalFormat format = new DecimalFormat("0.##");
+    private static final DecimalFormat df = new DecimalFormat("#,##0.##");
 
     protected static boolean runExpression(GuiChat chat) {
 
