@@ -11,6 +11,10 @@ public class EventHandler {
 
     private static final DecimalFormat df = new DecimalFormat("#,##0.##");
 
+    public static void changeDecimalFormat(String format) {
+        df.applyPattern(format);
+    }
+
     protected static boolean runExpression(GuiChat chat) {
 
         return runExprReplace(chat) || runExprAdd(chat);
