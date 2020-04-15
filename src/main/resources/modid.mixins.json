@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "me.kokeria.chatcalc.mixin.ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

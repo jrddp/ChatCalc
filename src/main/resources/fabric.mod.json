@@ -1,21 +1,17 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "chatcalc",
   "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "ChatCalc",
+  "description": "A simple mod that turns your chat into a calculator.\nType an equation and hit tab to replace it with the solution.",
   "authors": [
-    "Me!"
+    "Kokeria"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/chatcalc"
   },
-
   "license": "CC0-1.0",
   "icon": "assets/modid/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -25,7 +21,6 @@
   "mixins": [
     "modid.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
