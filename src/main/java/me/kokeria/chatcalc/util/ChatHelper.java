@@ -17,7 +17,7 @@ public class ChatHelper {
         int end = getEndOfWord(input, cursor);
 
         String output = input.substring(0, start) + replacement + input.substring(end);
-        if (output.length() > 32) return false;
+        if (output.length() > 256) return false;
         field.setText(output);
         return true;
     }
@@ -25,7 +25,7 @@ public class ChatHelper {
     public static boolean addWordAfterIndex(TextFieldWidget field, int index, String word) {
         String input = field.getText();
         String output = input.substring(0, index) + word + input.substring(index);
-        if (output.length() > 32) return false;
+        if (output.length() > 256) return false;
         field.setText(output);
         return true;
     }
