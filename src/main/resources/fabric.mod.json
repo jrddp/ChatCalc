@@ -11,15 +11,18 @@
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/chatcalc"
   },
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/chatcalc/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "client": [
+      "me.kokeria.chatcalc.ChatCalc"
+    ],
+    "modmenu": [
+      "me.kokeria.chatcalc.Configuration"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "chatcalc.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.7.4",
@@ -28,5 +31,8 @@
   },
   "suggests": {
     "flamingo": "*"
+  },
+  "custom": {
+    "modmenu:clientsideOnly": true
   }
 }

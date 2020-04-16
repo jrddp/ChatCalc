@@ -8,10 +8,8 @@ import java.text.DecimalFormat;
 
 public class EventHandler {
 
-    private static final DecimalFormat df = new DecimalFormat("#,##0.##");
-
-    public static void changeDecimalFormat(String format) {
-        df.applyPattern(format);
+    private static DecimalFormat getDecimalFormat() {
+        return new DecimalFormat(ChatCalc.config.decimalFormat);
     }
 
     public static boolean runExpression(TextFieldWidget field) {
@@ -28,7 +26,7 @@ public class EventHandler {
         try {
             String word = ChatHelper.getWord(originalText, cursor);
             double solution = MathEngine.eval(word);
-            String solStr = df.format(solution);
+            String solStr = getDecimalFormat().format(solution);
             return ChatHelper.replaceWord(field, solStr);
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
@@ -49,7 +47,7 @@ public class EventHandler {
             if (!word.endsWith("=")) return false;
             word = word.substring(0, word.length() - 1);
             double solution = MathEngine.eval(word);
-            String solStr = df.format(solution);
+            String solStr = getDecimalFormat().format(solution);
             return ChatHelper.addWordAfterIndex(field, ChatHelper.getEndOfWord(originalText, cursor), solStr);
         } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();

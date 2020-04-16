@@ -1,0 +1,5 @@
+{
+  "text.autoconfig.chatcalc.title": "Configure ChatCalc",
+  "text.autoconfig.chatcalc.option.decimalFormat": "Decimal Format String",
+  "text.autoconfig.chatcalc.option.decimalFormat.@PrefixText": "This pattern determines the format in which calculated answers are presented\nBy default, one thousand will be represented as \"1,000\" with up to 2 decimal places\nYou may change this to remove or change the decimal separator (,) and the amount of decimal places\nWARNING: Be cautious when changing this or it may have unruly consequences.\n\nExamples -\n0.## -> Will no longer include the decimal separator (,)\n#,##0.#### -> Will display up to 4 decimal places of accuracy\n0.00 -> Will always display 2 decimal places, even if they are 0\n\nMore information may be found here: https://docs.oracle.com/javase/tutorial/i18n/format/decimalFormat.html"
+}

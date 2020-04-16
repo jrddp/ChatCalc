@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "me.kokeria.chatcalc.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
-    "me.kokeria.chatcalc.mixin.ExampleMixin"
+    "ChatMixin"
   ],
   "injectors": {
     "defaultRequire": 1
