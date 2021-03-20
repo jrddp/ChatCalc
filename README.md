@@ -1,3 +1,7 @@
+# ChatCalc
+
+Downloads and more information can be found on the [CurseForge Page](https://www.curseforge.com/minecraft/mc-mods/chatcalc)
+
 ![ChatCalc](https://user-images.githubusercontent.com/39813387/111853064-c5154980-88ef-11eb-92e0-ccf775c1ea9e.png)
 
 ![DemoGif](https://media.giphy.com/media/hWXaAa4LVP3W7nJkpN/giphy.gif)
